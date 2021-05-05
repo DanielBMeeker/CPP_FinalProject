@@ -214,6 +214,7 @@ void MainWindow::clearForm() {
  * off each element to reset each vector to a blank slate
  */
 void MainWindow::clearCollection() {
+    while (completeGames.size() > 0 or looseGames.size() > 0 or sealedGames.size() > 0){
     for (size_t i = 0; i < looseGames.size(); i++) {
         looseGames.pop_back();
     }
@@ -222,6 +223,7 @@ void MainWindow::clearCollection() {
     }
     for (size_t i = 0; i < sealedGames.size(); i++) {
         sealedGames.pop_back();
+    }
     }
     calculateTotalValue(); //refreshes the value outputs
 }
